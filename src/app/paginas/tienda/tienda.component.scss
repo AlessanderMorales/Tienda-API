@@ -1,0 +1,116 @@
+/* Contenedor principal */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+  background-color: #f0f0f0; /* Fondo claro para el contenedor principal */
+}
+
+/* Estilo de las tarjetas de producto */
+.contenedor-productos div {
+  flex-basis: calc(25% - 1rem); /* Ajustar el tamaño de cada div considerando el gap */
+  padding: 1rem;
+  background-color: #fff; /* Fondo blanco para las tarjetas */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-productos div:hover {
+  transform: translateY(-5px); /* Efecto hover para levantar ligeramente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+/* Imagen del producto */
+.imagen {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd; /* Línea divisoria debajo de la imagen */
+  border-radius: 12px 12px 0 0;
+  background-color: #f9f9f9; /* Fondo claro para la imagen */
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen img:hover {
+  transform: scale(1.1); /* Zoom en la imagen al hacer hover */
+}
+
+/* Descripción del producto */
+.descripcion {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Título del producto */
+.descripcion h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Precio original */
+.descripcion p s {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Precio en oferta */
+.descripcion p strong {
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+/* Calificación */
+.descripcion p span {
+  font-weight: bold;
+}
+
+/* Texto de descripción */
+.descripcion p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* No se encontraron resultados */
+.contenedor-productos p {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+  background-color: rgb(204, 201, 201);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+  .contenedor-productos div {
+    flex-basis: calc(33.33% - 1rem); /* Tres columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-productos div {
+    flex-basis: calc(50% - 1rem); /* Dos columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-productos div {
+    flex-basis: 100%; /* Una columna en pantallas muy pequeñas */
+  }
+}

@@ -1,0 +1,15 @@
+<!-- producto.component.html -->
+<div class="contenedor-producto">
+  <h2 class="titulo">{{ producto.nombre }}</h2>
+  <div class="contenedor-imagen">
+    <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+  </div>
+  <div>
+    <span class="clasificacion-titulo">Clasificación: </span><span>{{ producto.nombre }}</span>
+  </div>
+  <p>{{ producto.descripcion }}</p>
+  <div>
+    <span>Precio:</span><span>{{ producto.precio | currency }}</span>
+  </div>
+  <a [routerLink]="['/detalles', producto.id]">Ver detalles</a>
+</div>

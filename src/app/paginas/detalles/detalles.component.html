@@ -1,0 +1,12 @@
+<div class="contenedor-detalle">
+  <div class="imagen">
+    <img [src]="detalleProducto?.imagen" alt="{{ detalleProducto?.imagen }}">
+  </div>
+  <div class="descripcion">
+    <h2>{{detalleProducto?.nombre}}</h2>
+    <p><s>Precio de venta recomendado: $1785</s></p>
+    <p><strong>¡Ahora a la venta por solo ${{detalleProducto?.precio}}</strong></p>
+    <p><span>Calificación de nuestros consumidores: </span> <strong>{{detalleProducto?.nombre}}/5</strong></p>
+    <p>{{detalleProducto?.descripcion}}</p>
+  </div>
+</div>

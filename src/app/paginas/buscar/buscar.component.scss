@@ -1,0 +1,80 @@
+/* Contenedor principal */
+div {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Título */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-align: center;
+  }
+  
+  /* Contenedor de los detalles del producto */
+  .contenedor-detalles {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Imagen del producto */
+  .imagen {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .imagen img {
+    max-width: 100%;
+    height: auto;
+    border-right: 1px solid #ddd;
+  }
+  
+  /* Descripción del producto */
+  .descripcion {
+    flex: 2;
+    padding: 15px;
+  }
+  
+  /* Título del producto */
+  .descripcion h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  /* Precio original */
+  .descripcion p s {
+    color: #999;
+    font-size: 14px;
+  }
+  
+  /* Precio en oferta */
+  .descripcion p strong {
+    color: #e74c3c;
+    font-size: 18px;
+  }
+  
+  /* Calificación */
+  .descripcion p span {
+    font-weight: bold;
+  }
+  
+  /* Texto de descripción */
+  .descripcion p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  /* No se encontraron resultados */
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+  }
+  

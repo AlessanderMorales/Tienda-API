@@ -1,0 +1,24 @@
+<!-- resultados-busqueda.component.html -->
+<div>
+  <h2>Resultados de búsqueda para "{{ query }}"</h2>
+  <div *ngIf="results.length; else noResults">
+    <div *ngFor="let result of results">
+      <!-- Estructura similar al carrito pero sin el botón de eliminar -->
+      <div class="contenedor-detalles">
+        <div class="imagen">
+          <img [src]="result.image" alt="{{result.title}}">
+        </div>
+        <div class="descripcion">
+          <h2>{{result.title}}</h2>
+          <p><s>Precio de venta recomendado ${{ result.originalPrice }}</s></p>
+          <p><strong>¡Ahora a la venta por solo ${{ result.price }}</strong></p>
+          <p><span>Calificación de nuestros consumidores: </span><strong>{{ result.rating.rate }}/5</strong></p>
+          <p>{{ result.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noResults>
+    <p>No se encontraron resultados</p>
+  </ng-template>
+</div>
